@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blanco: #ffffff;
+  --negro: #000000;
+  --dorado: #c7a85a;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var (--blanco);
+  color: var (--negro);
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  background: var (--negro);
+  color: var (--blanco);
+  display: flex;
+  justify-content: space-between;
+  padding: 15 px 40 px;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20 px;
+}
+
+nav a {
+  color: var (--blanco);
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  background: var (--dorado);
+  color: var (--blanco);
+  text-align: center;
+  padding: 80 px 20 px;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 20 px;
+  background: var (--negro);
+  color: var (--blanco);
+  padding: 10 px 25 px;
+  text-decoration: none;
+}
+
+/* SECCIONES */
+section {
+  padding: 60 px 40 px;
+  text-align: center;
+}
+
+.oscuro {
+  background: var (--negro);
+  color: var (--blanco);
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20 px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1 px solid var (--negro);
+  padding: 20 px;
+  max-width: 250 px;
+}
+
+/* LISTA */
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 10 px 0;
+}
+
+/* FOOTER */
+footer {
+  background: var (--negro);
+  color: var (--blanco);
+  text-align: center;
+  padding: 15 px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768 px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10 px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
