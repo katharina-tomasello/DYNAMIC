@@ -121,3 +121,11 @@ footer {
   object-fit: contain;
   max-height: 400px;
 }
+
+/* IMÁGENES DE PRODUCTOS */
+.card img {
+  width: 120px;       /* podés probar 100px, 120px o 150px */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
