@@ -37,7 +37,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background: transparent;
+  background: rgba(15,15,15,0.6);
   transition: all 0.35s ease;
 }
 
@@ -90,7 +90,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 8%;
+  padding-top: 100px;
   color: var(--blanco);
 }
 
@@ -218,7 +218,7 @@ section h2 {
 
 .card p {
   font-size: 0.98rem;
-  color: #555;
+  color: #ccc;
 }
 .catalogo-box {
   margin: 70px auto 0;
