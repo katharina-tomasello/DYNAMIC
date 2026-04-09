@@ -11,9 +11,9 @@
 
   <!-- NAV -->
  <nav id="navbar">
-  <div class="logo">
-    <img src="images/isotipo-blanco.png" alt="Dynamic">
-  </div>
+  <a href="#inicio" class="logo">
+  <img src="images/isotipo-blanco.png" alt="Dynamic">
+</a>
 
   <ul>
     <li><a href="#inicio">Inicio</a></li>
@@ -40,7 +40,10 @@
   </div>
 </section>
 
-  <div id="carouselImplantes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+  <div id="carouselImplantes"
+     class="carousel slide"
+     data-bs-ride="carousel"
+     data-bs-interval="2500">
 
   <div class="carousel-inner">
 
@@ -69,7 +72,7 @@
 </div>
 
   <!-- PRODUCTOS -->
-<section id="productos">
+<section id="productos" class="reveal">
   <h2>Nuestros Productos</h2>
 
   <div class="cards">
@@ -102,10 +105,24 @@
     </div>
 
   </div>
+  <div class="catalogo-box reveal">
+  <p class="catalogo-subtitulo">Descubrí más sobre nuestra línea completa de implantes y componentes.</p>
+
+  <h3>Catálogo de Productos</h3>
+
+  <p>
+    Encontrá especificaciones técnicas, compatibilidades y toda la información
+    necesaria para elegir la solución adecuada.
+  </p>
+
+  <a href="catalogo/catalogo-dynamic.pdf" download class="boton-catalogo">
+    Descargar catálogo
+  </a>
+</div>
 </section>
 
   <!-- NOSOTROS -->
-  <section id="nosotros" class="oscuro">
+  <section id="nosotros" class="oscuro reveal">
     <h2>Sobre Nosotros</h2>
     <p>
       Somos una empresa dedicada a la comercialización de implantes dentales con estándares internacionales de calidad.
@@ -114,15 +131,16 @@
   </section>
 
   <!-- BENEFICIOS -->
-  <section id="beneficios">
-    <h2>¿Por qué elegirnos?</h2>
-    <ul>
-      <li>✔ Productos certificados por ANMAT</li>
-      <li>✔ Tecnología de fabricación avanzada</li>
-      <li>✔ Productos de la más alta calidad</li>
-      <li>✔ Distribución en todo el país</li>
-    </ul>
-  </section>
+  <section id="beneficios" class="reveal">
+  <h2>¿Por qué elegirnos?</h2>
+
+  <ul class="beneficios-lista">
+    <li>Productos certificados por ANMAT</li>
+    <li>Tecnología de fabricación avanzada</li>
+    <li>Productos de la más alta calidad</li>
+    <li>Distribución en todo el país</li>
+  </ul>
+</section>
 
   <!-- CONTACTO -->
   <section id="contacto" class="oscuro">
@@ -133,9 +151,30 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Dynamic Argentina</p>
-  </footer>
+<footer>
+  <div class="footer-contenido">
+
+    <img src="images/logo-dynamic-dorado.png" alt="Dynamic" class="footer-logo">
+
+    <div class="footer-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <div class="footer-contacto">
+      <p>dynamicargentina@gmail.com</p>
+      <p>+54 11 5958-5461</p>
+      <p>Argentina</p>
+    </div>
+
+    <div class="footer-copy">
+      © 2026 Dynamic Argentina · Todos los derechos reservados
+    </div>
+
+  </div>
+</footer>
   
 <script>
   const nav = document.getElementById("navbar");
@@ -147,6 +186,21 @@
       nav.classList.remove("scrolled");
     }
   });
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  function mostrarSecciones() {
+    reveals.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+
+      if (top < window.innerHeight - 100) {
+        section.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', mostrarSecciones);
+  mostrarSecciones();
 </script>
 </body>
 </html>
